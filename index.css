@@ -1,0 +1,122 @@
+/*  ------******------Variables CSS------******------ */
+:root {
+    --navbar-bg-color: white;
+    --navbar-title-color: #ebaa00;
+    --nav-link-color: #fff;
+    --navbar-title-shadow: #52526a;
+    --nav-link-shadow: #3e63b1;
+    --navbar-toggler-color: #ffffff;
+}
+
+/* ------******------Barra de navegación------******------ */
+.navbar {
+    background: var(--nav-link-shadow) !important;
+}
+
+.navbar-toggler{
+    border: none!important;
+    transform: rotateZ(90deg);
+    background-color: var(--nav-link-shadow);
+
+}
+
+.navbar-toggler:focus, .navbar-toggler:active{
+    box-shadow: none!important;
+    outline: none!important;
+
+}
+
+.navbarMenu-lines{
+    padding: 5px;
+    border-left: 3px solid var(--navbar-toggler-color);
+    height: 5px;
+    width: 20px;
+}
+
+.navbarTitle {
+    font-family: 'Arvo', serif;
+    color: var(--navbar-title-color) !important;
+    font-weight: 700;
+    text-shadow: 1px 1px 0 var(--navbar-title-shadow), 
+    -1px -1px 0 var(--navbar-title-shadow), 
+    -1px 1px 0 var(--navbar-title-shadow), 
+    1px -1px 0 var(--navbar-title-shadow), 
+    0 1px 0 var(--navbar-title-shadow), 
+    -1px 0 0 var(--navbar-title-shadow), 
+    1px 0 0 var(--navbar-title-shadow), 
+    0 -1px 0 var(--navbar-title-shadow) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbarTitle span {
+    font-size: 15px;
+}
+
+.slide-navbar {
+    margin-top: 0.5rem;
+}
+
+.navbar-nav {
+    padding: 2rem;
+    margin-left: 50px;
+}
+
+/*  ------******------Animaciones para enlaces------******------ */
+.link_1 {
+    animation: slideFromRight 0.5s ease-out;
+}
+
+.link_2 {
+    animation: slideFromRight 0.8s ease-out;
+}
+
+.link_3 {
+    animation: slideFromRight 1.1s ease-out;
+}
+
+.link_4 {
+    animation: slideFromRight 1.4s ease-out;
+}
+
+.nav-item .nav-text {
+    color: var(--nav-link-color) !important;
+    font-size: 20px;
+    text-shadow: 1px 1px 0 var(--nav-link-shadow), 
+    -1px -1px 0 var(--nav-link-shadow), 
+    -1px 1px 0 var(--nav-link-shadow), 
+    1px -1px 0 var(--nav-link-shadow), 
+    0 1px 0 var(--nav-link-shadow), 
+    -1px 0 0 var(--nav-link-shadow), 
+    1px 0 0 var(--nav-link-shadow), 
+    0 -1px 0 var(--nav-link-shadow) !important;
+}
+
+/*  ------******------Animación de deslizamiento------******------ */
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(200%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/*  ------******------Ajustes para pantallas grandes------******------ */
+@media (min-width: 990px) {
+    .slide-navbar {
+        margin-top: 0;
+        background-image: none;
+        background-size: auto;
+        border-bottom-left-radius: none;
+        border-bottom-right-radius: none;
+        box-shadow: none;
+    }
+
+    .navbar-nav {
+        padding: 0;
+        margin-left: 0;
+    }
+}
