@@ -8,16 +8,69 @@
     --navbar-toggler-color: #ffffff;
 }
 
+*, html{
+    padding: 0;
+    margin: 0;
+}
+
 /* ------******------Barra de navegación------******------ */
 .navbar {
     background: var(--nav-link-shadow) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem!important;
+}
+
+.contentAll{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbarContent-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 200px;
+    width: 300px;
+    height: 100px;
+    color: var(--navbar-title-color) !important;
+    font-weight: 700;
+    text-shadow: 1px 1px 0 var(--navbar-title-shadow), 
+    -1px -1px 0 var(--navbar-title-shadow), 
+    -1px 1px 0 var(--navbar-title-shadow), 
+    1px -1px 0 var(--navbar-title-shadow), 
+    0 1px 0 var(--navbar-title-shadow), 
+    -1px 0 0 var(--navbar-title-shadow), 
+    1px 0 0 var(--navbar-title-shadow), 
+    0 -1px 0 var(--navbar-title-shadow) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-contact{
+    font-size: 22px;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--navbar-title-color);
+}
+
+.navbar-contact a{
+    text-decoration: none;
+    color: var(--navbar-title-color);
 }
 
 .navbar-toggler{
+    margin-top: 1.2rem;
     border: none!important;
     transform: rotateZ(90deg);
     background-color: var(--nav-link-shadow);
-
+    flex: 1 1 200px;
 }
 
 .navbar-toggler:focus, .navbar-toggler:active{
@@ -31,6 +84,10 @@
     border-left: 3px solid var(--navbar-toggler-color);
     height: 5px;
     width: 20px;
+}
+
+.navbarContent-title{
+ flex: 1 1 200px;
 }
 
 .navbarTitle {
@@ -83,16 +140,26 @@
 .nav-item .nav-text {
     color: var(--nav-link-color) !important;
     font-size: 20px;
-    text-shadow: 1px 1px 0 var(--nav-link-shadow), 
-    -1px -1px 0 var(--nav-link-shadow), 
-    -1px 1px 0 var(--nav-link-shadow), 
-    1px -1px 0 var(--nav-link-shadow), 
-    0 1px 0 var(--nav-link-shadow), 
-    -1px 0 0 var(--nav-link-shadow), 
-    1px 0 0 var(--nav-link-shadow), 
-    0 -1px 0 var(--nav-link-shadow) !important;
+    text-shadow: 1px 1px 0 var(--navbar-title-color),
+    1px 1px 1px var(--navbar-title-color);
+    /* -1px 1px 0 var(--navbar-title-color),  */
+    /* 1px -1px 0 var(--navbar-title-color),  */
+    /* 0 1px 0 var(--navbar-title-color),  */
+    /* -1px 0 0 var(--navbar-title-color),  */
+    /* 1px 0 0 var(--navbar-title-color),  */
+    /* 0 -1px 0 var(--navbar-title-color) !important; */
 }
 
+.dropdown-menu{
+    background-color: var(--nav-link-shadow)!important;
+    border: none!important;
+}
+
+.dropdown-menu li a{
+    color: var(--nav-link-color)!important;
+    animation: slideFromUp .3s ease-in-out;
+
+}
 /*  ------******------Animación de deslizamiento------******------ */
 @keyframes slideFromRight {
     0% {
@@ -101,6 +168,20 @@
 
     100% {
         transform: translateX(0);
+    }
+}
+
+@keyframes slideFromUp{
+    0%{
+        transform: translateY(-200%);
+        opacity: 0;
+    }
+    90%{
+        opacity: .2;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
