@@ -23,7 +23,7 @@
 }
 
 .contentAll{
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
 }
 
@@ -32,9 +32,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex: 1 1 200px;
-    width: 300px;
-    height: 100px;
+    grid: 1;
+    margin: 0 auto;
     color: var(--navbar-title-color) !important;
     font-weight: 700;
     text-shadow: 1px 1px 0 var(--navbar-title-shadow), 
@@ -45,7 +44,6 @@
     -1px 0 0 var(--navbar-title-shadow), 
     1px 0 0 var(--navbar-title-shadow), 
     0 -1px 0 var(--navbar-title-shadow) !important;
-    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -66,11 +64,11 @@
 }
 
 .navbar-toggler{
-    margin-top: 1.2rem;
+    margin: 1.5rem auto;
     border: none!important;
     transform: rotateZ(90deg);
     background-color: var(--nav-link-shadow);
-    flex: 1 1 200px;
+    grid: 1!important;
 }
 
 .navbar-toggler:focus, .navbar-toggler:active{
@@ -87,7 +85,8 @@
 }
 
 .navbarContent-title{
- flex: 1 1 200px;
+ grid: 1;
+ margin: 0 auto;
 }
 
 .navbarTitle {
@@ -142,12 +141,10 @@
     font-size: 20px;
     text-shadow: 1px 1px 0 var(--navbar-title-color),
     1px 1px 1px var(--navbar-title-color);
-    /* -1px 1px 0 var(--navbar-title-color),  */
-    /* 1px -1px 0 var(--navbar-title-color),  */
-    /* 0 1px 0 var(--navbar-title-color),  */
-    /* -1px 0 0 var(--navbar-title-color),  */
-    /* 1px 0 0 var(--navbar-title-color),  */
-    /* 0 -1px 0 var(--navbar-title-color) !important; */
+}
+
+.nav-item .nav-text:hover{
+    font-size: 22px;
 }
 
 .dropdown-menu{
@@ -160,6 +157,8 @@
     animation: slideFromUp .3s ease-in-out;
 
 }
+
+
 /*  ------******------Animación de deslizamiento------******------ */
 @keyframes slideFromRight {
     0% {
