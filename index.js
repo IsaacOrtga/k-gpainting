@@ -1,8 +1,20 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-    let line_1 = document.getElementById('line_1');
-    let line_2 = document.getElementById('line_2');
-    let line_3 = document.getElementById('line_3');
+    const serviceSection = document.querySelector('.service-section');
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
 
-    // line_3.style.display = "none";
-    line_1.classList.add("rotate-animation");
+    const observerCallback = (entries, observer) => {
+        entries.forEach(entry  => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    observer.observe(serviceSection);
 })

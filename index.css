@@ -6,6 +6,8 @@
     --navbar-title-shadow: #52526a;
     --nav-link-shadow: #3e63b1;
     --navbar-toggler-color: #ffffff;
+    --font-family: 'Arvo', serif;
+    --transparent-background: background-color: rgba(235, 170, 0, 0.5);
 }
 
 *, html{
@@ -90,7 +92,7 @@
 }
 
 .navbarTitle {
-    font-family: 'Arvo', serif;
+    font-family: var(--font-family);
     color: var(--navbar-title-color) !important;
     font-weight: 700;
     text-shadow: 1px 1px 0 var(--navbar-title-shadow), 
@@ -156,6 +158,97 @@
     color: var(--nav-link-color)!important;
     animation: slideFromUp .3s ease-in-out;
 
+}
+
+.presentation-content{
+    padding-top: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var;
+}
+
+.presentation-content h2{
+    font-size: 2em;
+    color: var(--nav-link-shadow);
+    margin-bottom: .5rem;
+}
+
+.ownerPicture-content{
+    padding-bottom: 1rem;
+}
+
+.titleService{
+    color: var(--navbar-title-color);
+}
+
+.ownerPicture-content img{
+    border-radius: 4px;
+}
+
+.presentation-textContent p{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.carousel-item img{
+    max-width: 100vw;
+    position: relative;
+}
+
+.carousel-caption {
+    opacity: .8;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.carousel-caption h3 {
+    opacity: 1;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.service-section{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s ease-out, transform .5s ease-out;
+}
+
+.service-section.visible{
+    opacity: 1;
+    background-color: var(--nav-link-shadow);
+    transform: translateX(0);
+}
+
+.service-section.visible .card{
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.service-section.visible .card{
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.carousel-caption p {
+    font-size: 3rem;
+}
+
+@media (max-width: 767.98px) {
+    .carousel-caption {
+        font-size: 0.8rem;
+    }
+
+    .carousel-caption h3 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+.card-title{
+    color: var(--nav-link-shadow);
 }
 
 
