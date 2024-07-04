@@ -240,8 +240,18 @@ html {
     font-size: 3rem;
 }
 
+.container-excellence{
+    background-color: var(--nav-link-shadow);
+}
+
+.text-excellence{
+    color: var(--navbar-title-color);
+}
+
 .contact-button {
-    background-color: var(--navbar-title-color);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: opacity 1s ease-out, transform .5s ease-out;
 }
 
 .contact-button .card {
@@ -254,6 +264,24 @@ html {
 
 .contact-button a {
     text-decoration: none;
+}
+
+.contact-button.visible {
+    opacity: 1;
+    background-color: var(--navbar-title-color);
+
+    transform: translateX(0);
+}
+
+.contact-button.visible .card {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.contact-button.visible .card {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .contactContent-title{
