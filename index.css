@@ -26,8 +26,8 @@ html {
 }
 
 .contentAll {
-    display: grid;
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
 }
 
 .navbarContent-contact {
@@ -52,7 +52,7 @@ html {
 }
 
 .navbar-contact {
-    font-size: 22px;
+    font-size: 20px;
     flex-wrap: wrap;
     display: flex;
     align-items: center;
@@ -256,20 +256,23 @@ html {
     text-decoration: none;
 }
 
+.contactContent-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 
 .contact-title,
 .contact-paraph {
     color: var(--nav-link-shadow);
-    position: relative;
+    /* position: relative; */
 }
 
 .contact-icon {
     width: 50px;
-    position: absolute;
-    bottom: 70px;
-    right: 85px;
-    opacity: .8;
-    color: var(--nav-link-shadow);
+    margin-top: -42px;
+    color: var(--nav-link-shadow); 
 }
 
 @media (max-width: 767.98px) {
