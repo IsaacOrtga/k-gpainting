@@ -10,7 +10,8 @@
     --transparent-background: background-color: rgba(235, 170, 0, 0.5);
 }
 
-*, html{
+*,
+html {
     padding: 0;
     margin: 0;
 }
@@ -21,15 +22,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem!important;
+    padding: 1rem !important;
 }
 
-.contentAll{
+.contentAll {
     display: grid;
     flex-wrap: wrap;
 }
 
-.navbarContent-contact{
+.navbarContent-contact {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,19 +39,19 @@
     margin: 0 auto;
     color: var(--navbar-title-color) !important;
     font-weight: 700;
-    text-shadow: 1px 1px 0 var(--navbar-title-shadow), 
-    -1px -1px 0 var(--navbar-title-shadow), 
-    -1px 1px 0 var(--navbar-title-shadow), 
-    1px -1px 0 var(--navbar-title-shadow), 
-    0 1px 0 var(--navbar-title-shadow), 
-    -1px 0 0 var(--navbar-title-shadow), 
-    1px 0 0 var(--navbar-title-shadow), 
-    0 -1px 0 var(--navbar-title-shadow) !important;
+    text-shadow: 1px 1px 0 var(--navbar-title-shadow),
+        -1px -1px 0 var(--navbar-title-shadow),
+        -1px 1px 0 var(--navbar-title-shadow),
+        1px -1px 0 var(--navbar-title-shadow),
+        0 1px 0 var(--navbar-title-shadow),
+        -1px 0 0 var(--navbar-title-shadow),
+        1px 0 0 var(--navbar-title-shadow),
+        0 -1px 0 var(--navbar-title-shadow) !important;
     flex-direction: column;
     align-items: center;
 }
 
-.navbar-contact{
+.navbar-contact {
     font-size: 22px;
     flex-wrap: wrap;
     display: flex;
@@ -60,49 +61,50 @@
     color: var(--navbar-title-color);
 }
 
-.navbar-contact a{
+.navbar-contact a {
     text-decoration: none;
     color: var(--navbar-title-color);
 }
 
-.navbar-toggler{
+.navbar-toggler {
     margin: 1.5rem auto;
-    border: none!important;
+    border: none !important;
     transform: rotateZ(90deg);
     background-color: var(--nav-link-shadow);
-    grid: 1!important;
+    grid: 1 !important;
 }
 
-.navbar-toggler:focus, .navbar-toggler:active{
-    box-shadow: none!important;
-    outline: none!important;
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    box-shadow: none !important;
+    outline: none !important;
 
 }
 
-.navbarMenu-lines{
+.navbarMenu-lines {
     padding: 5px;
     border-left: 3px solid var(--navbar-toggler-color);
     height: 5px;
     width: 20px;
 }
 
-.navbarContent-title{
- grid: 1;
- margin: 0 auto;
+.navbarContent-title {
+    grid: 1;
+    margin: 0 auto;
 }
 
 .navbarTitle {
     font-family: var(--font-family);
     color: var(--navbar-title-color) !important;
     font-weight: 700;
-    text-shadow: 1px 1px 0 var(--navbar-title-shadow), 
-    -1px -1px 0 var(--navbar-title-shadow), 
-    -1px 1px 0 var(--navbar-title-shadow), 
-    1px -1px 0 var(--navbar-title-shadow), 
-    0 1px 0 var(--navbar-title-shadow), 
-    -1px 0 0 var(--navbar-title-shadow), 
-    1px 0 0 var(--navbar-title-shadow), 
-    0 -1px 0 var(--navbar-title-shadow) !important;
+    text-shadow: 1px 1px 0 var(--navbar-title-shadow),
+        -1px -1px 0 var(--navbar-title-shadow),
+        -1px 1px 0 var(--navbar-title-shadow),
+        1px -1px 0 var(--navbar-title-shadow),
+        0 1px 0 var(--navbar-title-shadow),
+        -1px 0 0 var(--navbar-title-shadow),
+        1px 0 0 var(--navbar-title-shadow),
+        0 -1px 0 var(--navbar-title-shadow) !important;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,56 +144,57 @@
     color: var(--nav-link-color) !important;
     font-size: 20px;
     text-shadow: 1px 1px 0 var(--navbar-title-color),
-    1px 1px 1px var(--navbar-title-color);
+        1px 1px 1px var(--navbar-title-color);
 }
 
-.nav-item .nav-text:hover{
+.nav-item .nav-text:hover {
     font-size: 22px;
 }
 
-.dropdown-menu{
-    background-color: var(--nav-link-shadow)!important;
-    border: none!important;
+.dropdown-menu {
+    background-color: var(--nav-link-shadow) !important;
+    border: none !important;
 }
 
-.dropdown-menu li a{
-    color: var(--nav-link-color)!important;
+.dropdown-menu li a {
+    color: var(--nav-link-color) !important;
     animation: slideFromUp .3s ease-in-out;
 
 }
 
-.presentation-content{
+.presentation-content {
     padding-top: 1rem;
     font-family: 'Montserrat', sans-serif;
     background-color: var;
 }
 
-.presentation-content h2{
+.presentation-content h2 {
     font-size: 2em;
     color: var(--nav-link-shadow);
     margin-bottom: .5rem;
 }
 
-.ownerPicture-content{
+.ownerPicture-content {
     padding-bottom: 1rem;
 }
 
-.titleService{
+.titleService {
     color: var(--navbar-title-color);
 }
 
-.ownerPicture-content img{
+.ownerPicture-content img {
     border-radius: 4px;
 }
 
-.presentation-textContent p{
+.presentation-textContent p {
     font-size: 1.5em;
     text-align: center;
 }
 
-.carousel-item img{
+.carousel-item img {
     max-width: 100vw;
     position: relative;
+    max-height: 260px;
 }
 
 .carousel-caption {
@@ -201,29 +204,33 @@
 }
 
 .carousel-caption h3 {
-    opacity: 1;
     font-size: 3rem;
     font-weight: bold;
+    text-shadow: 1px 1px 0 black;
 }
 
-.service-section{
+.carousel-caption p {
+    text-shadow: 2px 2px 0 black;
+}
+
+.service-section {
     opacity: 0;
     transform: translateY(100px);
     transition: opacity 1s ease-out, transform .5s ease-out;
 }
 
-.service-section.visible{
+.service-section.visible {
     opacity: 1;
     background-color: var(--nav-link-shadow);
     transform: translateX(0);
 }
 
-.service-section.visible .card{
+.service-section.visible .card {
     opacity: 0;
     transform: translateX(-100px);
 }
 
-.service-section.visible .card{
+.service-section.visible .card {
     opacity: 1;
     transform: translateX(0);
     transition: opacity 1s ease-out, transform 1s ease-out;
@@ -231,6 +238,38 @@
 
 .carousel-caption p {
     font-size: 3rem;
+}
+
+.contact-button {
+    background-color: var(--navbar-title-color);
+}
+
+.contact-button .card {
+    background-color: var(--navbar-title-color);
+    border: none;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.contact-button a {
+    text-decoration: none;
+}
+
+
+.contact-title,
+.contact-paraph {
+    color: var(--nav-link-shadow);
+    position: relative;
+}
+
+.contact-icon {
+    width: 50px;
+    position: absolute;
+    bottom: 70px;
+    right: 85px;
+    opacity: .8;
+    color: var(--nav-link-shadow);
 }
 
 @media (max-width: 767.98px) {
@@ -247,7 +286,7 @@
     }
 }
 
-.card-title{
+.card-title {
     color: var(--nav-link-shadow);
 }
 
@@ -263,17 +302,29 @@
     }
 }
 
-@keyframes slideFromUp{
-    0%{
+@keyframes slideFromUp {
+    0% {
         transform: translateY(-200%);
         opacity: 0;
     }
-    90%{
+
+    90% {
         opacity: .2;
     }
-    100%{
+
+    100% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@keyframes slideFromBottomRight {
+    0% {
+        transform: translateZ(-200%);
+    }
+
+    100% {
+        transform: translateZ(0);
     }
 }
 
