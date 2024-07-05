@@ -8,6 +8,7 @@
     --navbar-toggler-color: #ffffff;
     --font-family: 'Arvo', serif;
     --transparent-background: background-color: rgba(235, 170, 0, 0.5);
+    --secondary-background: #f2f2f2;
 }
 
 *,
@@ -159,7 +160,6 @@ html {
 .dropdown-menu li a {
     color: var(--nav-link-color) !important;
     animation: slideFromUp .3s ease-in-out;
-
 }
 
 .presentation-content {
@@ -271,6 +271,10 @@ html {
 /* ------------------------------------
 ------------------REVIEWS------------------ 
 ------------------------------------------*/
+.container-reviews{
+    background-color: var(--secondary-background);
+}
+
 .carousel-inner{
     padding: 1rem;
     height: auto;
@@ -306,7 +310,6 @@ html {
     transform: translateY(-100px);
     opacity: 0;
     transition: opacity 1s ease-out, transform .5s ease-out;
-    margin-top: 1rem;
 }
 
 .contact-button .card {

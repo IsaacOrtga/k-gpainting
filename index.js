@@ -27,17 +27,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     const myCarousel = document.querySelector('#carouselExampleControls');
     const carousel = new bootstrap.Carousel(myCarousel, {
-        interval: 3000, // Intervalo de desplazamiento automático en milisegundos (ej. 5000 = 5 segundos)
-        wrap: true // Permite que el carrusel vuelva al principio después de la última diapositiva
+        interval: 3000, 
+        wrap: true 
     });
 
-    // Muestra las flechas al pasar el mouse sobre el carrusel
+ 
     myCarousel.addEventListener('mouseenter', function() {
         myCarousel.querySelector('.carousel-control-prev').style.visibility = 'visible';
         myCarousel.querySelector('.carousel-control-next').style.visibility = 'visible';
     });
 
-    // Oculta las flechas cuando el mouse sale del carrusel
     myCarousel.addEventListener('mouseleave', function() {
         myCarousel.querySelector('.carousel-control-prev').style.visibility = 'hidden';
         myCarousel.querySelector('.carousel-control-next').style.visibility = 'hidden';
