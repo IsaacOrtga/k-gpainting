@@ -12,7 +12,7 @@
 }
 
 *,
-html {
+html, body {
     padding: 0;
     margin: 0;
 }
@@ -115,13 +115,9 @@ html {
     font-size: 15px;
 }
 
-.slide-navbar {
-    margin-top: 0.5rem;
-}
-
 .navbar-nav {
     padding: 2rem;
-    margin-left: 50px;
+    text-align: center;
 }
 
 /*  ------******------Animaciones para enlaces------******------ */
@@ -144,12 +140,11 @@ html {
 .nav-item .nav-text {
     color: var(--nav-link-color) !important;
     font-size: 20px;
-    text-shadow: 1px 1px 0 var(--navbar-title-color),
-        1px 1px 1px var(--navbar-title-color);
+    transition: color 0.5s ease-in-out;
 }
 
 .nav-item .nav-text:hover {
-    font-size: 22px;
+    color: var(--navbar-title-color)!important;
 }
 
 .dropdown-menu {
@@ -357,6 +352,16 @@ html {
     width: 50px;
     margin-top: -42px;
     color: var(--nav-link-shadow);
+}
+
+.footer{
+    background-color: var(--nav-link-shadow);
+    padding: .5rem;
+    color: var(--nav-link-color);
+}
+
+.footer p{
+    margin: 0;
 }
 
 @media (max-width: 767.98px) {

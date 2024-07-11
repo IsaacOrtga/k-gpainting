@@ -1,0 +1,67 @@
+/*  ------******------Variables CSS------******------ */
+:root {
+    --navbar-bg-color: white;
+    --navbar-title-color: #ebaa00;
+    --nav-link-color: #fff;
+    --navbar-title-shadow: #52526a;
+    --nav-link-shadow: #3e63b1;
+    --navbar-toggler-color: #ffffff;
+    --font-family: 'Arvo', serif;
+    --transparent-background: background-color: rgba(235, 170, 0, 0.5);
+    --secondary-background: #f2f2f2;
+}
+
+*,
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+.interiorContent{
+    padding: 0!important;
+    margin: 0!important;
+}
+
+.interiorContent-description{
+    padding: 1rem!important;
+    margin: .5rem;
+    text-align: center;
+}
+
+.interiorContent-description h3{
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+}
+
+.interiorContent-description p{
+    margin-top: 1rem;
+}
+
+.interiorContent-description ul{
+    list-style: none;
+}
+
+.interior-descriptionContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bedroomPainted, .hallwayPainted{
+    background-color: var(--navbar-title-color);
+    color: var(--nav-link-color);
+}
+
+.bedroomPainted h3, .hallwayPainted h3{
+    text-shadow: 2px 2px 0 var(--navbar-title-shadow);
+}
+
+.imgService{
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.bedroomPainted h3, p{
+    text-align: center;
+}
