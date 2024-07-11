@@ -17,51 +17,70 @@ html, body{
     margin: 0;
 }
 
-.interiorContent{
+.worksContent{
     padding: 0!important;
     margin: 0!important;
 }
 
-.interiorContent-description{
+.worksContent-description{
     padding: 1rem!important;
     margin: .5rem;
     text-align: center;
 }
 
-.interiorContent-description h3{
+.worksContent-description h3{
     margin-top: .5rem;
     margin-bottom: 1.5rem;
 }
 
-.interiorContent-description p{
+.worksContent-description p{
     margin-top: 1rem;
 }
 
-.interiorContent-description ul{
+.worksContent-description ul{
     list-style: none;
 }
 
-.interior-descriptionContent{
+.works-descriptionContent{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.bedroomPainted, .hallwayPainted{
+.workContent-card_1, .workContent-card_3{
     background-color: var(--navbar-title-color);
     color: var(--nav-link-color);
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s ease-out, transform .5s ease-out;
 }
 
-.bedroomPainted h3, .hallwayPainted h3{
+.workContent-card_1 h3, .workContent-card_3 h3{
     text-shadow: 2px 2px 0 var(--navbar-title-shadow);
 }
 
+.workContent-card_2, .workContent-card_4{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s ease-out, transform .5s ease-out;
+}
+
+.workContent-card_1.visible, .workContent-card_3.visible{
+    opacity: 1;
+    background-color: var(--nav-link-shadow);
+    transform: translateX(0);
+}
+
+.workContent-card_2.visible, .workContent-card_4.visible{
+    opacity: 1;
+    transform: translateX(0);
+}
 .imgService{
     width: 100%;
     border-radius: 10px;
 }
 
 
-.bedroomPainted h3, p{
+.worksContent-card_1 h3, p{
     text-align: center;
 }

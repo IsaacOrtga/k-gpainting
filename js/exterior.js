@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-    const bedroomSection = document.querySelector('.workContent-card_1');
-    const kitchenSection = document.querySelector('.workContent-card_2');
-    const hallwaySection = document.querySelector('.workContent-card_3');
-    const specialtySection = document.querySelector('.workContent-card_4');
+    const bedroomSection = document.querySelector('.bedroomPainted');
+    const kitchenSection = document.querySelector('.kitchenPainted');
+    const hallwaySection = document.querySelector('.hallwayPainted');
+    const specialtySection = document.querySelector('.specialtyPainted');
     const serviceContact = document.querySelector('.contact-button');
     
     const observerOptions = {
