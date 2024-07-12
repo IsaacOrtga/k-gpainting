@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const hallwaySection = document.querySelector('.workContent-card_3');
     const specialtySection = document.querySelector('.workContent-card_4');
     const serviceContact = document.querySelector('.contact-button');
-    
+
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     };
 
     const observerCallback = (entries, observer) => {
-        entries.forEach(entry  => {
-            if(entry.isIntersecting) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
                 observer.unobserve(entry.target);
             }
@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     observer.observe(bedroomSection);
     observer.observe(kitchenSection);
     observer.observe(hallwaySection);
-    observer.observe(specialtySection);
+    if (specialtySection) {
+        observer.observe(specialtySection);
+    }
     observer.observe(serviceContact);
 })

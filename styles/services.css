@@ -26,7 +26,6 @@ html,body
 
 .worksContent-description{
     padding: 1rem!important;
-    margin: .5rem;
     text-align: justify;
 }
 
@@ -60,6 +59,7 @@ html,body
 
 .workContent-card_1 h3, .workContent-card_3 h3{
     text-shadow: 2px 2px 0 var(--navbar-title-shadow);
+    color: var(--navbar-title-color);
 }
 
 .workContent-card_2, .workContent-card_4{

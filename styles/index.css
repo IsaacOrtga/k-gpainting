@@ -157,6 +157,10 @@ html, body {
     animation: slideFromUp .3s ease-in-out;
 }
 
+.contact-buttonDesktop{
+    display: none;
+}
+
 .presentation-content {
     padding-top: 1rem;
     font-family: 'Montserrat', sans-serif;
