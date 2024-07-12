@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", (event) => {
+    const desktopRowSection = document.querySelector('.desktop-row');
     const serviceSection = document.querySelector('.service-section');
     const excellenceSection = document.querySelector('.container-excellence');
     const serviceContact = document.querySelector('.contact-button');
+    
 
     const observerOptions = {
         root: null,
@@ -19,6 +21,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     };
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
+    observer.observe(desktopRowSection);
     observer.observe(serviceSection);
     observer.observe(excellenceSection);
     observer.observe(serviceContact);

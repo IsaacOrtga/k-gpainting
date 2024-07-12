@@ -41,18 +41,35 @@
 
 @media (min-width: 1200px) and (max-width: 2700px){
 
-    .contentAll{
+    /* .contentAll{
         display: flex;
         flex-direction: row;
-    }
+    } */
 
     .desktop-row{
-        display: flex;
-        flex-direction: row;
+        opacity: 0;
+        transform: translateY(100px);
+        transition: opacity 1s ease-out, transform .5s ease-out;
     }
 
-    .company-prsentation{
-        width: 50%;
+    .desktop-row.visible{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .orderRowContent {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; 
+    }
+    
+    .ownerPicture-content, .presentation-textContent, .contact-buttonDesktop {
+        flex: 1;
+        padding: 10px;
+    }
+
+    .presentation-textContent{
+        margin-left: 15px;
     }
 
     .presentation-textContent h2{
@@ -68,23 +85,25 @@
     }
 
     .contact-buttonDesktop{
-        background-color: var(--navbar-title-color);
         display: grid;
         place-items: center;
-        width: 50%;
-        margin-top: 1rem;
-        margin-right: 1rem;
-        margin-bottom: 1rem;
         border-radius: 5px;
+        cursor: pointer;
     }
 
     .contact-buttonDesktop a{
         text-decoration: none;
     }
 
+    .contact-buttonDesktop .card{
+        border: none;
+    }
+
     .contactBody{
-        background-color: var(--nav-link-shadow);
-        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 
     .contactContent-titleDesktop{
@@ -96,16 +115,46 @@
 
     .contact-paraphDesktop{
         color: var(--navbar-title-color);
+        color: var(--nav-link-shadow);
+
     }
     
     .contact-titleDesktop{
-        color: var(--navbar-title-color);
+        color: var(--nav-link-shadow);
     }
 
-    .contact-iconDesktop {
+    .contact-iconDesktop{
         width: 70px;
         color: var(--navbar-title-color)!important;
         margin-top: 0;
-        color: var(--nav-link-shadow);
+    }
+
+    .carousel-inner{
+        padding: 0;
+        height: 550px;
+    }
+
+    .carousel-item{
+        height: 100%;
+    }
+
+    .carousel-item img{
+        max-height: 550px;
+    }
+
+    .carousel-caption {
+        margin-bottom: 5%;
+    }
+
+    .carousel-slideReview .carousel-inner{
+        height: auto;
+    }
+
+    .contactBody button{
+        margin-top: 1rem!important;
+    }
+    .contactBody button:hover{
+        background-color: var(--navbar-title-color);
+        border: none;
     }
 }
