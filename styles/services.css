@@ -27,6 +27,7 @@ html,body
 .worksContent-description{
     padding: 1rem!important;
     text-align: justify;
+    border: 1px solid red;
 }
 
 .worksContent-description h3{
@@ -40,7 +41,7 @@ html,body
 }
 
 .worksContent-description ul{
-    list-style: none;
+     list-style-type:circle;
 }
 
 .works-descriptionContent{

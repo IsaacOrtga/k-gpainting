@@ -1,0 +1,56 @@
+/*  ------******------Variables CSS------******------ */
+:root {
+    --navbar-bg-color: white;
+    --navbar-title-color: #ebaa00;
+    --nav-link-color: #fff;
+    --navbar-title-shadow: #52526a;
+    --nav-link-shadow: #3e63b1;
+    --navbar-toggler-color: #ffffff;
+    --font-family: 'Arvo', serif;
+    --transparent-background: background-color: rgba(235, 170, 0, 0.5);
+    --secondary-background: #f2f2f2;
+}
+
+.adminFormContent{
+    font-family: var(--font-family);
+    margin: 10% 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.adminLogin{
+    font-family: var(--font-family);
+    color: var(--navbar-title-color) !important;
+    font-weight: 700;
+    text-shadow: 1px 1px 0 var(--navbar-title-shadow),
+        -1px -1px 0 var(--navbar-title-shadow),
+        -1px 1px 0 var(--navbar-title-shadow),
+        1px -1px 0 var(--navbar-title-shadow),
+        0 1px 0 var(--navbar-title-shadow),
+        -1px 0 0 var(--navbar-title-shadow),
+        1px 0 0 var(--navbar-title-shadow),
+        0 -1px 0 var(--navbar-title-shadow) !important;
+}
+
+.adminForm{
+    display: grid;
+    place-items: center;
+}
+
+.adminForm label{
+    margin-bottom: 0.5rem;
+}
+.adminForm input{
+    margin-bottom: 20px;
+}
+
+.adminForm button{
+    width: 100%;
+    background-color: var(--navbar-title-color);
+    color: var(--nav-link-color);
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+}

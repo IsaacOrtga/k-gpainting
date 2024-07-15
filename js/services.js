@@ -1,4 +1,17 @@
 document.addEventListener("DOMContentLoaded", (event) => {
+    const minWidthResponsive = 1200;
+    const cardsContent = document.querySelector('.works-descriptionContent');
+    const container = document.querySelector('.worksContent');
+    const contentDescription = document.querySelectorAll('.workContent-card_1, .workContent-card_2, .workContent-card_3, .workContent-card_4');
+
+    if(window.matchMedia(`(min-width: ${minWidthResponsive}px)`).matches){
+        contentDescription.forEach(element => {
+            element.classList.remove('col-md-6');
+        });
+        cardsContent.classList.remove('row');
+        container.classList.remove('container');
+    }
+
     const bedroomSection = document.querySelector('.workContent-card_1');
     const kitchenSection = document.querySelector('.workContent-card_2');
     const hallwaySection = document.querySelector('.workContent-card_3');
@@ -28,4 +41,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         observer.observe(specialtySection);
     }
     observer.observe(serviceContact);
+
+
 })

@@ -1,0 +1,25 @@
+/*  ------******------Variables CSS------******------ */
+:root {
+    --navbar-bg-color: white;
+    --navbar-title-color: #ebaa00;
+    --nav-link-color: #fff;
+    --navbar-title-shadow: #52526a;
+    --nav-link-shadow: #3e63b1;
+    --navbar-toggler-color: #ffffff;
+    --font-family: 'Arvo', serif;
+    --transparent-background: background-color: rgba(235, 170, 0, 0.5);
+    --secondary-background: #f2f2f2;
+}
+
+@media (min-width: 1200px) and (max-width: 2700px) {
+    .workContent-card_1, .workContent-card_2, .workContent-card_3, .workContent-card_4 {
+        background-color: initial!important;
+        color: initial;
+    }
+
+    .workContent-card_1 h3, .workContent-card_2 h3, .workContent-card_3 h3, .workContent-card_4 h3 {
+        color: var(--navbar-title-color);
+        text-shadow: 2px 2px 0 var(--navbar-title-shadow);
+    }
+    
+}
