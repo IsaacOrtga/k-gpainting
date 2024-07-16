@@ -24,7 +24,9 @@ if ($conn->connect_error) {
 
 // Obtener los datos del formulario
 $email = isset($_POST['email']) ? $_POST['email'] : '';
-$password = isset($_POST['password']) ? $_POST['password'] : '';
+var_dump($_POST['passwordEncrypt']);
+exit();
+$password = isset($_POST['passwordEncrypt']) ? $_POST['passwordEncrypt'] : '';
 
 // Validar que los campos no estén vacíos
 if (empty($email) || empty($password)) {
@@ -33,7 +35,7 @@ if (empty($email) || empty($password)) {
 }
 
 // Preparar y ejecutar la consulta
-$stmt = $conn->prepare("SELECT id, username, email FROM administrator WHERE email = ? AND pass = ?");
+$stmt = $conn->prepare("SELECT id, username, pass, email FROM administrator WHERE email = ? AND pass = ?");
 $stmt->bind_param("ss", $email, $password);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -44,6 +46,7 @@ if ($result->num_rows > 0) {
     // Guardar información del usuario en la sesión
     $_SESSION['user_id'] = $user['id'];
     $_SESSION['username'] = $user['username'];
+    $_SESSION['pass'] = $user['pass'];
     $_SESSION['email'] = $user['email'];
     
     echo json_encode(["success" => true, "redirect" => "./admin/dashboard.php"]);

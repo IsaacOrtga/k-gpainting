@@ -16,13 +16,18 @@ $(document).ready(function() {
             return;
         }
 
+        let randomNum = Math.floor(Math.random() * 100000);
+        let now = new Date();
+        let userData = `${now}^--${randomNum}^--${password}`;
+        let passwordEncrypt = btoa(userData);
+        console.log('Pass encriptada: ' + passwordEncrypt)
         // Ajax query
         $.ajax({
             url: './controller/login-controller.php',
             type: 'POST',
             data: {
                 email,
-                password
+                passwordEncrypt
             },
             success: function(response) {
                 let jsonResponse = JSON.parse(response);

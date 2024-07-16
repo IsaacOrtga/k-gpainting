@@ -8,6 +8,7 @@ if (!isset($_SESSION['user_id'])) {
     header('Location: /admin-login.html');
     exit();
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +20,16 @@ if (!isset($_SESSION['user_id'])) {
     <title>Admin Dashboard - K&G Painting</title>
 </head>
 <body>
-    <h1>Welcome, <?php echo $_SESSION['username']; ?></h1>
+    <h1 >Welcome, <?php echo $_SESSION['username']; ?></h1>
     <!-- Contenido del Dashboard -->
+     <script>
+
+
+        const decodedData = atob(passwordEncrypt);
+        const [decodedDate, decodedRandomNum, decodedPassword] = decodedData.split('^--');
+        console.log('Pass desencriptada: ' + decodedDate);
+        console.log('RandomNum desencriptada: ' + decodedRandomNum);
+        console.log('Date desencriptada: ' + decodedPassword );
+     </script>
 </body>
 </html>
