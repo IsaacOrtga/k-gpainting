@@ -24,21 +24,22 @@ if ($conn->connect_error) {
 
 // Obtener los datos del formulario
 $email = isset($_POST['email']) ? $_POST['email'] : '';
-var_dump($_POST['passwordEncrypt']);
-exit();
-$password = isset($_POST['passwordEncrypt']) ? $_POST['passwordEncrypt'] : '';
+$passwordEncrypt = isset($_POST['passwordEncrypt']) ? $_POST['passwordEncrypt'] : '';
 
 // Validar que los campos no estén vacíos
-if (empty($email) || empty($password)) {
+if (empty($email) || empty($passwordEncrypt)) {
     echo json_encode(["success" => false, "message" => "Email and Password are required."]);
     exit();
 }
 
+// var_dump($passwordEncrypt);
+// exit;
 // Preparar y ejecutar la consulta
 $stmt = $conn->prepare("SELECT id, username, pass, email FROM administrator WHERE email = ? AND pass = ?");
-$stmt->bind_param("ss", $email, $password);
+$stmt->bind_param("ss", $email, $passwordEncrypt);
 $stmt->execute();
 $result = $stmt->get_result();
+
 
 // Verificar si se encontró el usuario
 if ($result->num_rows > 0) {

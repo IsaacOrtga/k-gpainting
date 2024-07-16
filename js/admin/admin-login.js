@@ -16,9 +16,12 @@ $(document).ready(function() {
             return;
         }
 
-        let randomNum = Math.floor(Math.random() * 100000);
-        let now = new Date();
-        let userData = `${now}^--${randomNum}^--${password}`;
+        let randomCode = [];
+        for(let i = 0; i < password.length; i++){
+            randomCode.push(password.charCodeAt(i));
+        }
+
+        let userData = `${email}^--${randomCode}^--${password}`;
         let passwordEncrypt = btoa(userData);
         console.log('Pass encriptada: ' + passwordEncrypt)
         // Ajax query

@@ -1,0 +1,25 @@
+/*  ------******------Variables CSS------******------ */
+:root {
+    --navbar-bg-color: white;
+    --navbar-title-color: #ebaa00;
+    --nav-link-color: #fff;
+    --navbar-title-shadow: #52526a;
+    --nav-link-shadow: #3e63b1;
+    --navbar-toggler-color: #ffffff;
+    --font-family: 'Arvo', serif;
+    --transparent-background: background-color: rgba(235, 170, 0, 0.5);
+    --secondary-background: #f2f2f2;
+}
+
+*,
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+.dashboardContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
